@@ -1,0 +1,212 @@
+﻿.hamburger-menu-and-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+    .hamburger-menu-and-info .info {
+        margin-left: 2em;
+        margin-top: 1em;
+    }
+
+@media (min-width: 900px) {
+    .hamburger-menu-and-info .info {
+        position: relative;
+        top: 30px;
+        margin-left: 0;
+    }
+}
+
+.hamburger-menu-and-info .info span {
+    color: #E84545;
+}
+
+.hamburger-menu-and-info svg {
+    cursor: pointer;
+    fill: #E84545;
+}
+
+@media (min-width: 900px) {
+    .hamburger-menu-and-info svg {
+        display: none;
+    }
+}
+
+.hamburger-menu-and-info .display-menu {
+    display: none;
+    position: absolute;
+    top: 13em;
+    left: 11vw;
+    width: 10em;
+    height: 13em;
+    padding: 1em;
+    background-color: #53354A;
+}
+
+    .hamburger-menu-and-info .display-menu li {
+        margin-top: 1em;
+        cursor: pointer;
+    }
+
+        .hamburger-menu-and-info .display-menu li:hover {
+            color: #FF9191;
+        }
+
+.card-container {
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    margin-top: 2em;
+    grid-template-columns: 100%;
+    grid-row: auto;
+    grid-gap: 40px;
+}
+
+@media (min-width: 830px) {
+    .card-container {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media (min-width: 1700px) {
+    .card-container {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+.card {
+    width: 300px;
+    background-color: #903749;
+    padding: 1em;
+    text-align: center;
+}
+
+    .card .card-img {
+        height: 23em;
+        margin-bottom: 1em;
+    }
+
+    .card img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .card h3 {
+        margin: 0;
+        text-align: center;
+        padding: 2px;
+    }
+
+    .card .info {
+        width: 18em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        font-size: 14px;
+        text-align: left;
+        margin: auto;
+    }
+
+        .card .info li {
+            margin-top: 1em;
+        }
+
+        .card .info span {
+            font-weight: bold;
+            display: block;
+        }
+
+    .card .btn-action {
+        margin-top: 1em;
+    }
+
+.search {
+    display: none;
+}
+
+@media (min-width: 900px) {
+    .search {
+        display: inline;
+        position:absolute;
+        left:35vw;
+        top:5em;
+    }
+    .search input {
+                width: 18em;
+                padding: 5px;
+                margin: 8px 0;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+}
+@media (max-width: 970px) {
+    .search {
+        left: 30vw;
+    }
+}
+
+    @media (min-width: 900px) and (min-width: 1500px) {
+        .search input {
+            width: 25vw;
+        }
+    }
+
+    @media (min-width: 900px) {
+        .search input:focus {
+            outline-color: #E84545;
+        }
+
+        .search .search-btn {
+            all:unset;
+            cursor: pointer;
+            position: relative;
+            right: 5px;
+            top: 1px;
+            background-color: #E84545;
+            padding: 10px;
+        }
+
+        .search svg {
+            position: relative;
+            top: 2px;
+        }
+    }
+
+    .filter-container {
+        display: none;
+    }
+
+    @media (min-width: 900px) {
+        .filter-container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            position: relative;
+            top: 20px;
+            width: 100%;
+            height: 10em;
+            justify-content: space-evenly;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+    }
+.filter-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #53354A;
+    cursor: pointer;
+}
+.filter-container .filter-box input {
+    all: unset;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+    .filter-container .filter-box input:hover {
+        color: #FF9191;
+    }

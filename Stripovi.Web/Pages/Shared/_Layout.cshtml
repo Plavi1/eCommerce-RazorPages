@@ -1,0 +1,102 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Stripovi.Data.Repositorys.KorpaRepository
+@using Stripovi.Data.Repositorys.PorudzbinaRepository
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@inject IKorpaRepository korpaRepo
+@inject IPorudzbinaRepository porudzbinaRepo
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Stripovi.Web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-1">
+                <a class="logo" asp-area="" asp-page="/Index">Strip<span>.com</span></a>
+                <partial name="_LoginPartial.cshtml" />
+            </div>
+            <div class="nav-2">
+                <ul>
+                    <li><a asp-area="" asp-page="/Index">Pocetna</a></li>
+                    <li><a asp-area="" asp-page="/Kontakt">Kontakt</a></li>
+                </ul>
+                @if (SignInManager.IsSignedIn(User) && !User.IsInRole("SuperAdmin"))
+                {
+                    <a class="korpa" asp-area="" asp-page="/Korpa">
+                        <div class="svg-korpa">
+                            <svg width="25" height="25" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0
+                        0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0
+                        0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2
+                        1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4
+                        0 2 2 0 0 1-4 0z" />
+                            </svg>
+                        </div>
+                        <span>Korpa </span>
+                        <span id="in-korpa">@korpaRepo.UserBrojStripovaUkorpi(UserManager.GetUserId(User))</span>
+                    </a>
+                    @if (porudzbinaRepo.UserBrojPorudzbina(UserManager.GetUserId(User)) != 0)
+                    {
+                        <div class="status-porudzbine">
+                            <a asp-area="" asp-page="/StatusPorudzbine">Status Porudzbine</a>
+                        </div>
+                    }
+                }
+                else if (SignInManager.IsSignedIn(User) && User.IsInRole("SuperAdmin")) { }
+                else
+                {
+                    <a class="korpa" asp-area="Identity" asp-page="/Account/Login">
+                        <div class="svg-korpa">
+                            <svg width="25" height="25" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0
+                        0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0
+                        0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2
+                        1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4
+                        0 2 2 0 0 1-4 0z" />
+                            </svg>
+                        </div>
+                        <span>Korpa </span>
+                    </a>
+                }
+            </div>
+        </nav>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer>
+        <a href="https://github.com/Plavi1/eCommerce-RazorPages" target="_blank">
+            <div class="ecommerce">
+                E-commerce v1
+                <svg fill="none" height="25" viewBox="0 0 25 25" width="25">
+                    <path clip-rule="evenodd"
+                          d="M15.7481 24.9471C24.0901 24.7061 24.9111 22.9501 24.9111 12.9811C24.9111 1.98108 23.9111 0.981079 12.9111 0.981079C1.91113 0.981079
+                0.911133 1.98108 0.911133 12.9811C0.911133 22.9761 1.73713 24.7151 10.1391 24.9491C10.2121 24.8581 10.2391 24.7441 10.2391 24.6281C10.2391 24.3781 10.2291 21.8121
+                10.2241 20.9291C7.18713 21.5681 6.54613 19.5101 6.54613 19.5101C6.04913 18.2881 5.33313 17.9621 5.33313 17.9621C4.34213 17.3061 5.40813 17.3191 5.40813 17.3191C6.50413 17.3941
+                7.08113 18.4101 7.08113 18.4101C8.05513 20.0271 9.63713 19.5601 10.2591 19.2891C10.3581 18.6061 10.6401 18.1391 10.9521 17.8751C8.52713 17.6081 5.97813 16.7001 5.97813 12.6451C5.97813
+                11.4901 6.40413 10.5461 7.10213 9.80608C6.98913 9.53808 6.61513 8.46208 7.20913 7.00608C7.20913 7.00608 8.12613 6.72108 10.2121 8.09008C11.0831 7.85508 12.0171 7.73808 12.9461 7.73408C13.8731
+                7.73808 14.8071 7.85508 15.6801 8.09008C17.7651 6.72108 18.6801 7.00608 18.6801 7.00608C19.2761 8.46208 18.9011 9.53808 18.7881 9.80608C19.4881 10.5461 19.9111 11.4901 19.9111 12.6451C19.9111
+                16.7101 17.3581 17.6051 14.9251 17.8661C15.3171 18.1931 15.6661 18.8391 15.6661 19.8261C15.6661 20.7721 15.6601 22.4451 15.6561 23.5541C15.6541 24.1031 15.6531 24.5131 15.6531 24.6281C15.6531
+                24.7371 15.6821 24.8521 15.7481 24.9471V24.9471Z" fill="#E84545" fill-rule="evenodd" />
+                </svg>
+            </div>
+        </a>
+
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

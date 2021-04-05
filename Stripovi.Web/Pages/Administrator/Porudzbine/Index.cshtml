@@ -1,0 +1,104 @@
+﻿@page
+@model Stripovi.Web.Pages.Administrator.Porudzbine.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<style>
+    .table-container {
+        white-space: unset;
+    }
+
+    a:hover {
+        color: #FF9191;
+    }
+</style>
+<a asp-page="/administrator">< Nazad</a>
+<h1 style="color:#E84545">Sve Porudzbine</h1>
+<div class="table-container">
+    <table class="table table-bordered table-dark">
+        <thead>
+            <tr>
+                <th></th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Porudzbina[0].Status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Porudzbina[0].BrojPorucenihStripova)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Porudzbina[0].Pitanje)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Porudzbina[0].UkupnaCena)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Porudzbina[0].User)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Porudzbina[0].VremePosiljke)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Porudzbina[0].Grad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Porudzbina[0].PostanskiBroj)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Porudzbina[0].Ulica)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Porudzbina[0].KucniBroj)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Porudzbina[0].Placanje)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Porudzbina)
+            {
+                <tr>
+                    <td>
+                        <a asp-page="./Details" asp-route-id="@item.IdPorudzbine" class="btn btn-primary" style="margin-bottom: 5px">Detalji</a>
+                        <a asp-page="./Delete" asp-route-id="@item.IdPorudzbine" class="btn btn-danger">Obrisi</a>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BrojPorucenihStripova)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pitanje)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UkupnaCena)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VremePosiljke)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Grad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PostanskiBroj)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ulica)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KucniBroj)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Placanje)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

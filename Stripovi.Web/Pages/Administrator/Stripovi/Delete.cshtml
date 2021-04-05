@@ -1,0 +1,71 @@
+﻿@page
+@model Stripovi.Web.Pages.Administrator.Stripovi.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1 style="color:#E84545">Obrisi</h1>
+
+<h3>Da li si siguran da zelis da obrises ovaj?</h3>
+<div>
+    <h4>Strip</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Strip.Naziv)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Strip.Naziv)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Strip.Naslov)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Strip.Naslov)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Strip.Izdavac)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Strip.Izdavac)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Strip.Stanje)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Strip.Stanje)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Strip.Jezik)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Strip.Jezik)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Strip.GodinaIzdanja)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Strip.GodinaIzdanja)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Strip.Cena)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Strip.Cena)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Strip.imgRoute)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Strip.imgRoute)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="Strip.IdStripa" />
+        <input type="submit" value="Obrisi" class="btn btn-danger" /> |
+        <a asp-page="./Index">Nazad na listu</a>
+    </form>
+</div>

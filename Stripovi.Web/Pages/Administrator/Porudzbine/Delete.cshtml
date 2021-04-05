@@ -1,0 +1,89 @@
+﻿@page
+@model Stripovi.Web.Pages.Administrator.Porudzbine.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1 style="color:#E84545">Obrisi</h1>
+
+<h3>Da li si siguran da zelis da obrises ovu?</h3>
+<div>
+    <h4>Porudzbinu</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Porudzbina.User)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Porudzbina.User.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Porudzbina.VremePosiljke)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Porudzbina.VremePosiljke)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Porudzbina.Grad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Porudzbina.Grad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Porudzbina.PostanskiBroj)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Porudzbina.PostanskiBroj)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Porudzbina.Ulica)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Porudzbina.Ulica)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Porudzbina.KucniBroj)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Porudzbina.KucniBroj)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Porudzbina.Placanje)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Porudzbina.Placanje)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Porudzbina.Pitanje)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Porudzbina.Pitanje)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Porudzbina.UkupnaCena)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Porudzbina.UkupnaCena)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Porudzbina.BrojPorucenihStripova)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Porudzbina.BrojPorucenihStripova)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Porudzbina.Status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Porudzbina.Status)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="Porudzbina.IdPorudzbine" />
+        <input type="submit" value="Obrisi" class="btn btn-danger" /> |
+        <a asp-page="./Index">Nazad na listu</a>
+    </form>
+</div>

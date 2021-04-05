@@ -1,0 +1,103 @@
+﻿@page
+@model Stripovi.Web.Pages.Administrator.Stripovi.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<style>
+    .btn-action {
+        color: white;
+        cursor: pointer;
+    }
+
+        .btn-action:hover {
+            color: white;
+        }
+
+    p {
+        padding: 2em 0 2em 0;
+    }
+
+    a:hover {
+        color: #FF9191;
+    }
+</style>
+
+<a asp-page="/administrator">< Nazad</a>
+
+<h1 style="color:#E84545">Svi Stripovi</h1>
+
+<p>
+    <a class="btn btn-action" asp-page="Create">Napravi strip</a>
+</p>
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Strip[0].Naziv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Strip[0].Naslov)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Strip[0].Izdavac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Strip[0].Stanje)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Strip[0].Jezik)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Strip[0].GodinaIzdanja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Strip[0].Cena)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Strip[0].imgRoute)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Strip)
+        {
+            var photoPath = "~/images/" + (item.imgRoute ?? "noimage.jpg");
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Naziv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Naslov)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Izdavac)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Stanje)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Jezik)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GodinaIzdanja)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cena)
+                </td>
+                <td>
+                    <img src="@photoPath"
+                         asp-append-version="true" />
+                </td>
+                <td>
+                    <a class="text-primary" asp-page="./Edit" asp-route-id="@item.IdStripa">Promeni</a> |
+                    <a asp-page="./Details" asp-route-id="@item.IdStripa">Detalji</a> |
+                    <a class="text-danger" asp-page="./Delete" asp-route-id="@item.IdStripa">Obrisi</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

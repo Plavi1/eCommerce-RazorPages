@@ -1,0 +1,91 @@
+﻿.alert{
+    position:relative;
+    margin-top: 2em;
+}
+p{
+    margin-top: 2em;
+}
+
+.table-container {
+    padding-top: 3em;
+}
+
+.ukupno-container {
+    display: block;
+    margin-top: 2em;
+    text-align: end;
+    padding: 10px;
+    border-bottom: 2px solid #903749;
+}
+.btn-danger svg {
+    fill: white;
+}
+
+.ukupno-container p {
+    margin: 0;
+}
+
+    .ukupno-container span {
+        font-weight: bold;
+        font-size: 18px;
+        padding-left: 5px;
+    }
+
+h4 {
+    font-weight: bold;
+    padding: 3em 0 3em 0;
+    color: #903749;
+}
+
+.adresa-container {
+    padding: 1em;
+    border-bottom: 2px solid #903749;
+}
+
+    .adresa-container span {
+        color: #E84545;
+        font-weight: bold;
+    }
+
+.placanje-container {
+    display: block;
+    padding: 10px 10px 2em 10px;
+    border-bottom: 2px solid #903749;
+}
+
+.pitanje-container {
+    display: block;
+    padding: 10px;
+}
+
+.sazetak-container {
+    display: block;
+    margin-top: 2em;
+    padding: 10px;
+}
+
+    .sazetak-container li {
+        margin-top: 5px;
+    }
+
+    .sazetak-container span {
+        color: #E84545;
+    }
+
+.checkbox-container {
+    display: block;
+    margin-top: 2em;
+    text-align: center;
+}
+
+    .checkbox-container label {
+        padding-left: 0.5em;
+    }
+
+.btn-container {
+    display: block;
+    text-align: center;
+}
+select{
+    padding:10px;
+}

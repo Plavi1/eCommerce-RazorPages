@@ -1,0 +1,117 @@
+﻿@page
+@model Stripovi.Web.Pages.AdministratorModel
+@{
+}
+<style>
+    .karta-stats {
+        padding-top: 1em;
+    }
+
+    .plava {
+        border-left: 10px solid;
+        border-left-color: dodgerblue;
+    }
+
+    .zuta {
+        border-left: 10px solid;
+        border-left-color: orange;
+    }
+
+    .zelena {
+        border-left: 10px solid;
+        border-left-color: forestgreen;
+    }
+
+    .crvena {
+        border-left: 10px solid;
+        border-left-color: red;
+    }
+
+    h6 {
+        margin-top: -20px;
+        font-weight: bold;
+    }
+
+    .karta-funkcija {
+        padding-top: 1em;
+    }
+
+    .card {
+        background-color: #53354A;
+    }
+
+    .card-header {
+        background-color: #903749;
+    }
+
+    .komande {
+        display: flex;
+        flex-direction: column;
+        width: 10em;
+        margin: auto;
+    }
+
+        .komande a {
+            margin-top: 1em;
+        }
+</style>
+<div class="text-center">
+    <h1 class="display-4"><b>Glavni interfejs</b></h1>
+    <h4> <b style="color:red">ZA ADMINE</b></h4>
+    <hr />
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="karta-stats">
+            <div class="card plava shadow rounded">
+                <div class="card-body">
+                    <h6 class="card-title" style="color:dodgerblue">
+                        Broj Registrovanih Clanova
+                    </h6>
+                    <h4>@Model.brojRegistrovanihClanova</h4>
+                </div>
+            </div>
+        </div>
+        <div class="karta-stats">
+            <div class="card zuta shadow rounded">
+                <div class="card-body">
+                    <h6 class="card-title" style="color:orange">
+                        Broj Porudzbina
+                    </h6>
+                    <h4>@Model.brojPorudzbina</h4>
+                </div>
+            </div>
+        </div>
+        <div class="karta-stats">
+            <div class="card zelena shadow rounded">
+                <div class="card-body">
+                    <h6 class="card-title" style="color:forestgreen">
+                        Broj Stripova u Prodaji
+                    </h6>
+                    <h4>@Model.brojStripova</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8 karta-funkcija">
+        <div class="card text-center shadow rounded" style="padding-bottom:52px;">
+            <div class="card-header">
+                <h3>Funkcije</h3>
+            </div>
+            <div class="card-body">
+                <div class="komande" style="padding-top:10px">
+                    <a class="btn btn-success" asp-page="administrator/stripovi/create/">
+                        <svg width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                        </svg>
+                        Registruj Strip
+                    </a>
+                    <a class="btn btn-primary" asp-page="Administrator/Stripovi/Index">Stripovi</a>
+                    <a class="btn btn-primary" asp-page="Administrator/Porudzbine/Index">Porudzbine</a>
+                    <a class="btn btn-warning" asp-page="administrator/kontakti/Index">Sanduce <span class="badge badge-light">@Model.brojPoruka</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

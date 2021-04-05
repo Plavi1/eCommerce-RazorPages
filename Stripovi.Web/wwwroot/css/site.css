@@ -1,0 +1,255 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap");
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+a {
+    color: white;
+}
+svg{
+    all:unset;
+}
+
+body {
+    background-color: #2B2E4A;
+    margin: 0;
+    font-family: 'Exo', sans-serif;
+    font-size: 1em;
+    color: white;
+    padding-bottom: 50px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #53354A;
+}
+
+    header nav {
+        padding: 2em 10vw 0 10vw;
+    }
+
+@media (min-width: 1200px) {
+    header nav {
+        padding: 2em 0 0 0;
+        margin: auto;
+        width: 60%;
+        height: 100%;
+    }
+}
+nav a:hover {
+    all: unset;
+    color: #FF9191;
+    cursor: pointer;
+}
+
+.nav-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+    .nav-1 .logo {
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+        .nav-1 .logo span {
+            font-size: 16px;
+        }
+
+    .nav-1 li {
+        display: inline;
+        padding-left: 1.5em;
+    }
+
+    .nav-1 .register {
+        color: #E84545;
+    }
+
+.nav-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+    .nav-2 ul {
+        padding: 0;
+    }
+
+        .nav-2 ul li {
+            display: inline;
+            margin-right: 3em;
+            cursor: pointer;
+        }
+
+            .nav-2 ul li:hover {
+                color: #FF9191;
+            }
+
+    .nav-2 .korpa {
+        position: relative;
+        padding: 8px 40px 8px 40px;
+        bottom: 1.5em;
+        background-color: #2B2E4A;
+        border: #E84545 solid 2px;
+        color: #E84545;
+        cursor: pointer;
+        z-index:99;
+    }
+
+@media (min-width: 900px) {
+    .nav-2 .korpa {
+        bottom: 5px;
+    }
+}
+
+.nav-2 .korpa .svg-korpa {
+    position: absolute;
+    left: 1em;
+    bottom: 2px;
+}
+
+.nav-2 .korpa span {
+    position: relative;
+    font-weight: bold;
+    left: 1em;
+}
+
+.nav-2 .korpa:hover {
+    background-color: #34385a;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #53354A;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+    footer .ecommerce {
+        cursor: pointer;
+        margin-top:10px;
+    }
+
+        footer .ecommerce svg {
+            position: relative;
+            top: 5px;
+            left: 10px;
+        }
+
+        footer .ecommerce:hover {
+            color: #FF9191;
+        }
+
+main {
+    padding: 10em 10vw 3em 10vw;
+}
+
+@media (min-width: 1200px) {
+    main {
+        padding: 10em 0 3em 0;
+        margin: auto;
+        width: 60%;
+        height: 100%;
+    }
+}
+.table-container {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+table.table-bordered > thead > tr > th {
+    border: 1px solid #2B2E4A;
+    text-align: center;
+    background-color: #903749;
+    color: white;
+}
+
+table.table-bordered > tbody > tr > td {
+    border: 1px solid #2B2E4A;
+    border-bottom: 1px solid #903749;
+    background-color: #2B2E4A;
+    text-align: center;
+    vertical-align: middle;
+}
+    img {
+    height: 150px;
+    width: 150px;
+}
+
+.btn-action {
+    all: unset;
+    width: 7em;
+    height: 1em;
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #E84545;
+    font-weight: bold;
+    text-align: center;
+}
+
+    .btn-action:hover {
+        background-color: #FF9191;
+    }
+#in-korpa {
+    position: absolute;
+    left: 23px;
+    top: 2px;
+    color: white;
+}
+#logout {
+    all: unset;
+    cursor: pointer;
+    color: #E84545;
+}
+    #logout:hover {
+        color: #FF9191;
+    }
+.partial form{
+    all:unset;
+}
+.status-porudzbine {
+    position: absolute;
+    right: 10vw;
+    bottom: 0;
+}
+.status-porudzbine a {
+    color: #FF9191;
+}
+
+@media (min-width: 900px) {
+        .status-porudzbine {
+       top: 4em;
+  }
+}
+@media (min-width: 1200px) {
+    .status-porudzbine {
+        right: 20vw;
+    }
+}

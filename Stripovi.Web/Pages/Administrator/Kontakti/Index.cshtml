@@ -1,0 +1,60 @@
+﻿@page
+@model Stripovi.Web.Pages.Administrator.Kontakti.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<a asp-page="/administrator">< Nazad</a>
+<h1 style="color:#E84545">Kontakti</h1>
+<div class="table-container">
+    <table class="table table-bordered table-dark">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kontakt[0].ImePrezime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kontakt[0].Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kontakt[0].Razlog)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kontakt[0].Naslov)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kontakt[0].Komentar)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Kontakt)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ImePrezime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Razlog)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Naslov)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Komentar)
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" asp-page="./Details" asp-route-id="@item.Id">Details</a>
+                        <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

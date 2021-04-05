@@ -1,0 +1,89 @@
+﻿@page
+@model Stripovi.Web.Pages.KontaktModel
+@{
+}
+<style>
+    .informacije-container {
+        padding: 1em;
+    }
+
+    h2 {
+        color: #903749;
+        margin-bottom: 1em;
+    }
+
+    li {
+        margin-bottom: 2em;
+    }
+
+    .map-container {
+        overflow: auto;
+        white-space: nowrap;
+        border: 1px solid #53354A;
+    }
+
+    .info ul li span {
+        font-weight: bold;
+    }
+</style>
+<div class="informacije-container">
+    <div class="row" style="justify-content:space-between">
+        <div class="info">
+            <h2>Informacije</h2>
+            <ul>
+                <li>Radno vreme: <span>10:00-20:00h</span></li>
+                <li>Broj telefona: <span>011/ 1234567</span></li>
+                <li>Info email: <span>info@stripovi.com</span></li>
+                <li>Mesto: <span>Na planeti</span></li>
+            </ul>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d91640.31910223277!2d20.443040968200037!3d44.12957282984325!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xef02a5e74b33f23e!2sSrpski%20Holivud!5e0!3m2!1ssr!2srs!4v1617614319412!5m2!1ssr!2srs"
+                    width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</div>
+<div class="kontakt-container">
+    <h2>Kontakt</h2>
+    <form method="post">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label asp-for="@Model.Kontakt.ImePrezime"></label>
+                <input asp-for="@Model.Kontakt.ImePrezime" class="form-control" />
+                <span asp-validation-for="@Model.Kontakt.ImePrezime" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="@Model.Kontakt.Email"></label>
+                <input asp-for="@Model.Kontakt.Email" class="form-control" />
+                <span asp-validation-for="@Model.Kontakt.Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label asp-for="@Model.Kontakt.Razlog"></label>
+                <select asp-for="@Model.Kontakt.Razlog" class="form-control col-12">
+                    <option value="">Izaberi..</option>
+                    <option value="Porudzbina">Porudzbina</option>
+                    <option value="Izmena Porudzbine">Izmena Porudzbine</option>
+                    <option value="Otkazivanje Porudzbine">Otkazivanje Porudzbine</option>
+                    <option value="Reklamacija i ostecenja">Reklamacija i ostecenja</option>
+                    <option value="Placanje">Placanje</option>
+                    <option value="Moj nalog">Moj nalog</option>
+                    <option value="Ostalo">Ostalo</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="@Model.Kontakt.Naslov"></label>
+                <input asp-for="@Model.Kontakt.Naslov" class="form-control" />
+                <span asp-validation-for="@Model.Kontakt.Naslov" class="text-danger"></span>
+            </div>
+        </div>
+        <label asp-for="@Model.Kontakt.Komentar"></label>
+        <textarea class="form-group col-md-12" id="message" asp-for="@Model.Kontakt.Komentar"></textarea>
+        <span asp-validation-for="@Model.Kontakt.Komentar" class="text-danger"></span>
+        <button type="submit" class="btn-action" style="display:block">Posalji</button>
+    </form>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
