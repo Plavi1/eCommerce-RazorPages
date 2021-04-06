@@ -26,6 +26,7 @@ namespace Stripovi.Data.Data
             base.OnModelCreating(builder);
             builder.SeedSuperAdmin();
             builder.MockStripovi();
+            builder.SeedKorisnika();
             builder.Entity<StripInPorudzbina>().HasKey(e => new { e.IdPorudzbine, e.IdStripa });
 
             foreach (var foreignKey in builder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))

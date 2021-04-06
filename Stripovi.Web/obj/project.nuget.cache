@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DbAcLZ+mVNMUMuAMU22YsZzRUW/18+Sw06/OzbER963PrR+6U2kw+ybI6OncLrpMtobc52zy1R7sRMUcAv85qA==",
+  "dgSpecHash": "R9bIUV0coDhpr2/UxpNWwSPFilNkzHH2i6Zh9x1j5krAyxyIifOSJ/IotiQQiorHqvjdmeDwyLm5l/4OAqdilw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Web\\Stripovi.Web.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\acc i zavrseni projekti\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Web\\Stripovi.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

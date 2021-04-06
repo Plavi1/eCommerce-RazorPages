@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UAGIHdTL4xrEWadKvA8Y8I47iijQUFmRA9wk9krbxq+CqCu5I3SwVEzlf7dXCKMI0zPNHgbSMmRtptmNvcT9ZA==",
+  "dgSpecHash": "iX1THttfUknwQpj9yeuhH40KiWFF7oHFDKr1F5F3rvz116ptn/zx7DbZdee0eFYR5g6Al4w+bizWXZ0X2A32JQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Data\\Stripovi.Data.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\acc i zavrseni projekti\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Data\\Stripovi.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.4\\microsoft.aspnetcore.cryptography.internal.5.0.4.nupkg.sha512",

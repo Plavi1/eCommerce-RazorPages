@@ -65,5 +65,31 @@ namespace Stripovi.Data.Data
 
             modelBuilder.Entity<Strip>().HasData(stripList);
         }
+        public static void SeedKorisnika(this ModelBuilder modelBuilder)
+        {
+            string KORISNIK1_ID = "02174cf0–9412–4cfe-afbf-59f706d72cf1";
+
+
+            // Pravimo Korisnika
+            var Korisnik1 = new IdentityUser
+            {
+                Id = KORISNIK1_ID,
+                Email = "korisnik1@korisnik.com",
+                EmailConfirmed = true,
+                UserName = "korisnik1@korisnik.com",
+                LockoutEnabled = true,
+                NormalizedEmail = "KORISNIK1@KORISNIK.COM",
+                NormalizedUserName = "KORISNIK1@KORISNIK.COM"
+            };
+
+            //Setuj Korisniku PW
+            PasswordHasher<IdentityUser> ph = new PasswordHasher<IdentityUser>();
+            Korisnik1.PasswordHash = ph.HashPassword(Korisnik1, "Sifra1");
+           
+
+            //Ubaci Korisnika
+            modelBuilder.Entity<IdentityUser>().HasData(Korisnik1);
+
+        }
     }
 }

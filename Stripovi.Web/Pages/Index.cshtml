@@ -71,12 +71,12 @@
             </div>
             <div class="display-menu">
                 <ul>
-                    <li>Zagor</li>
-                    <li>Dilan Dog</li>
-                    <li>Mister NO</li>
-                    <li>Alan Ford</li>
-                    <li>Blek</li>
-                </ul>
+                    <li><input type="submit" asp-for="Search" value="Mister NO" /></li>
+                    <li><input type="submit" asp-for="Search" value="Dilan Dog" /></li>
+                    <li><input type="submit" asp-for="Search" value="Alan Ford" /></li>
+                    <li><input type="submit" asp-for="Search" value="Zagor" /></li>
+                    <li><input type="submit" asp-for="Search" value="Blek" /></li>
+</ul>
             </div>
         </div>
     </form>
@@ -120,9 +120,20 @@ else
 
 @section Scripts{
     <script>
-        $(".filter-container .filter-box img").on('click', function () {
-            var id = $(this).attr('id');
-            $('.filter-container .filter-box #input-' + id).click();
+        $(document).ready(function () {
+            $(".filter-container .filter-box img").on('click', function () {
+                var id = $(this).attr('id');
+                $('.filter-container .filter-box #input-' + id).click();
+            });
+
+
+            $(".hamburger-menu-and-info .bi").click(function () {
+                $(".hamburger-menu-and-info .display-menu").css({ display: 'block' });
+            });
+            $(".hamburger-menu-and-info .display-menu").mouseleave(function () {
+                $(".hamburger-menu-and-info .display-menu").css({ display: 'none' });
+            });
+
         });
     </script>
 }

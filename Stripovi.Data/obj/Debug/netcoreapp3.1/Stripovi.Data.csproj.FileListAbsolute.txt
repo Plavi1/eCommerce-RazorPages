@@ -10,3 +10,15 @@ C:\Users\pc\Desktop\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\obj\Debug\n
 C:\Users\pc\Desktop\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\bin\Debug\netcoreapp3.1\Stripovi.Data.runtimeconfig.json
 C:\Users\pc\Desktop\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\bin\Debug\netcoreapp3.1\Stripovi.Data.runtimeconfig.dev.json
 C:\Users\pc\Desktop\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.genruntimeconfig.cache
+C:\Users\pc\Desktop\ASP.NET Core  VEZBA\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\bin\Debug\netcoreapp3.1\Stripovi.Data.deps.json
+C:\Users\pc\Desktop\ASP.NET Core  VEZBA\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\bin\Debug\netcoreapp3.1\Stripovi.Data.runtimeconfig.json
+C:\Users\pc\Desktop\ASP.NET Core  VEZBA\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\bin\Debug\netcoreapp3.1\Stripovi.Data.runtimeconfig.dev.json
+C:\Users\pc\Desktop\ASP.NET Core  VEZBA\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\bin\Debug\netcoreapp3.1\Stripovi.Data.dll
+C:\Users\pc\Desktop\ASP.NET Core  VEZBA\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\bin\Debug\netcoreapp3.1\Stripovi.Data.pdb
+C:\Users\pc\Desktop\ASP.NET Core  VEZBA\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.csprojAssemblyReference.cache
+C:\Users\pc\Desktop\ASP.NET Core  VEZBA\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\ASP.NET Core  VEZBA\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.AssemblyInfo.cs
+C:\Users\pc\Desktop\ASP.NET Core  VEZBA\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\ASP.NET Core  VEZBA\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.dll
+C:\Users\pc\Desktop\ASP.NET Core  VEZBA\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.pdb
+C:\Users\pc\Desktop\ASP.NET Core  VEZBA\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.genruntimeconfig.cache

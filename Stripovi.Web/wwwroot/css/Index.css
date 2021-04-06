@@ -25,6 +25,9 @@
     cursor: pointer;
     fill: #E84545;
 }
+    .hamburger-menu-and-info svg:hover {
+        fill: #FF9191;
+    }
 
 @media (min-width: 900px) {
     .hamburger-menu-and-info svg {
@@ -36,17 +39,21 @@
     display: none;
     position: absolute;
     top: 13em;
-    left: 11vw;
-    width: 10em;
-    height: 13em;
+    left: 10vw;
+    width: 11em;
+    height: auto;
     padding: 1em;
     background-color: #53354A;
+    z-index: 2;
+}
+.hamburger-menu-and-info .display-menu input{
+    all:unset;
 }
 
-    .hamburger-menu-and-info .display-menu li {
-        margin-top: 1em;
-        cursor: pointer;
-    }
+.hamburger-menu-and-info .display-menu li {
+    margin-top: 1em;
+    cursor: pointer;
+}
 
         .hamburger-menu-and-info .display-menu li:hover {
             color: #FF9191;
@@ -79,6 +86,7 @@
     background-color: #903749;
     padding: 1em;
     text-align: center;
+    z-index:1;
 }
 
     .card .card-img {

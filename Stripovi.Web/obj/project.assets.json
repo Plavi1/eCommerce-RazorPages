@@ -7942,11 +7942,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pc\\Desktop\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Web\\Stripovi.Web.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\Desktop\\acc i zavrseni projekti\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Web\\Stripovi.Web.csproj",
       "projectName": "Stripovi.Web",
-      "projectPath": "C:\\Users\\pc\\Desktop\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Web\\Stripovi.Web.csproj",
+      "projectPath": "C:\\Users\\pc\\Desktop\\acc i zavrseni projekti\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Web\\Stripovi.Web.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pc\\Desktop\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Web\\obj\\",
+      "outputPath": "C:\\Users\\pc\\Desktop\\acc i zavrseni projekti\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7963,8 +7963,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\pc\\Desktop\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Data\\Stripovi.Data.csproj": {
-              "projectPath": "C:\\Users\\pc\\Desktop\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Data\\Stripovi.Data.csproj"
+            "C:\\Users\\pc\\Desktop\\acc i zavrseni projekti\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Data\\Stripovi.Data.csproj": {
+              "projectPath": "C:\\Users\\pc\\Desktop\\acc i zavrseni projekti\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Data\\Stripovi.Data.csproj"
             }
           }
         }

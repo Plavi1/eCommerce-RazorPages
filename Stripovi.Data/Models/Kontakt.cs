@@ -9,17 +9,17 @@ namespace Stripovi.Data.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Niste upisali Ime i Prezime")]
         [Display(Name = "Ime i Prezime")]
         public string ImePrezime { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Niste upisali Email")]
         [EmailAddress]
         public string Email { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Niste upisali Razlog")]
         public string Razlog { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Niste upisali Naslov")]
         public string Naslov { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Niste napisali Komentar")]
         public string Komentar { get; set; }
     }
 }
