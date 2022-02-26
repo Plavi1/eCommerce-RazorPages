@@ -22,3 +22,16 @@ C:\Users\pc\Desktop\ASP.NET Core  VEZBA\eCommerce Razor Pages\eCommerce.v1\Strip
 C:\Users\pc\Desktop\ASP.NET Core  VEZBA\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.dll
 C:\Users\pc\Desktop\ASP.NET Core  VEZBA\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.pdb
 C:\Users\pc\Desktop\ASP.NET Core  VEZBA\eCommerce Razor Pages\eCommerce.v1\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.genruntimeconfig.cache
+C:\Users\PC\Desktop\eCommerce-RazorPages-main\Stripovi.Data\bin\Debug\netcoreapp3.1\Stripovi.Data.deps.json
+C:\Users\PC\Desktop\eCommerce-RazorPages-main\Stripovi.Data\bin\Debug\netcoreapp3.1\Stripovi.Data.runtimeconfig.json
+C:\Users\PC\Desktop\eCommerce-RazorPages-main\Stripovi.Data\bin\Debug\netcoreapp3.1\Stripovi.Data.runtimeconfig.dev.json
+C:\Users\PC\Desktop\eCommerce-RazorPages-main\Stripovi.Data\bin\Debug\netcoreapp3.1\Stripovi.Data.dll
+C:\Users\PC\Desktop\eCommerce-RazorPages-main\Stripovi.Data\bin\Debug\netcoreapp3.1\Stripovi.Data.pdb
+C:\Users\PC\Desktop\eCommerce-RazorPages-main\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\eCommerce-RazorPages-main\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Desktop\eCommerce-RazorPages-main\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\eCommerce-RazorPages-main\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.AssemblyInfo.cs
+C:\Users\PC\Desktop\eCommerce-RazorPages-main\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\eCommerce-RazorPages-main\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.dll
+C:\Users\PC\Desktop\eCommerce-RazorPages-main\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.pdb
+C:\Users\PC\Desktop\eCommerce-RazorPages-main\Stripovi.Data\obj\Debug\netcoreapp3.1\Stripovi.Data.genruntimeconfig.cache

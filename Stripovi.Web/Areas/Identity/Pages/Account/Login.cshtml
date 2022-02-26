@@ -1,17 +1,14 @@
 ﻿@page
 @model LoginModel
 
-@{
-    ViewData["Title"] = "Log in";
-}
+@{ ViewData["Title"] = "Log in"; }
 @if (TempData["message"] != null)
 {
-    <div class="col-sm-12 text-center">
-        <div class="alert alert-primary">
-            @TempData["message"]
-        </div>
+<div class="col-sm-12 text-center">
+    <div class="alert alert-primary">
+        @TempData["message"]
     </div>
-}
+</div>}
 <style>
     a:hover {
         color: #FF9191;
@@ -23,10 +20,37 @@
         border-radius: 50%;
         cursor: pointer;
     }
-    hr{
-        background-color:#53354A;
+
+    hr {
+        background-color: #53354A;
     }
 </style>
+<h4 class="text-center" style="color:#E84545">Test Accounts</h4>
+<hr />
+<div class="row col-md-12 justify-content-center test-container">
+    <form id="account" method="post">
+        <div class="col-md-6">
+            <div class="avatar">
+                <img id="1" src="~/images/Admin-avatar.jpg" />
+            </div>
+            <span><b style="color:red">Administrator</b></span>
+        </div>
+        <input hidden asp-for="Input.Email" value="Admin@admin.com" />
+        <input hidden asp-for="Input.Password" value="Sifra1" />
+        <button hidden id="sub-1" type="submit"></button>
+    </form>
+    <form id="account" method="post">
+        <div class="col-md-6">
+            <div class="avatar">
+                <img id="2" src="~/images/avatar1.jpg" />
+            </div>
+            <span style="margin-left:1.5em;">Korisnik</span>
+        </div>
+        <input hidden asp-for="Input.Email" value="Korisnik1@korisnik.com" />
+        <input hidden asp-for="Input.Password" value="Sifra1" />
+        <button hidden id="sub-2" type="submit"></button>
+    </form>
+</div>
 <h1 style="color:#E84545">@ViewData["Title"]</h1>
 <div class="row">
     <div class="col-md-4">
@@ -71,67 +95,37 @@
         <section>
             <h4>Koristi drugi servis da bi se ulogovao.</h4>
             <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
+            @{ if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                            {
+                <div>
+                    <p>
+                        Trenutno nema eksternih servisa za ulogovanje.
+                    </p>
+                </div> }
+                            else
+                            {
+                <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
                     <div>
                         <p>
-                            Trenutno nema eksternih servisa za ulogovanje.
+                            @foreach (var provider in Model.ExternalLogins)
+                            {
+            <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>}
                         </p>
                     </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
-            }
+                </form> } }
         </section>
     </div>
 </div>
-<h4 class="text-center" style="color:#E84545">Test Accounts</h4>
-<hr />
-<div class="row col-md-12 justify-content-center test-container">
-    <form id="account" method="post">
-        <div class="col-md-6">
-            <div class="avatar">
-                <img id="1" src="~/images/Admin-avatar.jpg" />
-            </div>
-            <span><b style="color:red">Administrator</b></span>
-        </div>
-        <input hidden asp-for="Input.Email" value="Admin@admin.com" />
-        <input hidden asp-for="Input.Password" value="Sifra1" />
-        <button hidden id="sub-1" type="submit"></button>
-    </form>
-    <form id="account" method="post">
-        <div class="col-md-6">
-            <div class="avatar">
-                <img id="2" src="~/images/avatar1.jpg" />
-            </div>
-            <span style="margin-left:1.5em;">Korisnik</span>
-        </div>
-        <input hidden asp-for="Input.Email" value="Korisnik1@korisnik.com" />
-        <input hidden asp-for="Input.Password" value="Sifra1" />
-        <button hidden id="sub-2" type="submit"></button>
-    </form>
-</div>
+
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
-<script>
-    $(document).ready(function () {
-        $(".test-container .avatar img").on('click', function () {
-            var id = $(this).attr('id');
-            $('.test-container #sub-' + id).click();
+    <script>
+        $(document).ready(function () {
+            $(".test-container .avatar img").on('click', function () {
+                var id = $(this).attr('id');
+                $('.test-container #sub-' + id).click();
+            });
         });
-    });
-</script>
+    </script>
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pc\\Desktop\\acc i zavrseni projekti\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Data\\Stripovi.Data.csproj": {}
+    "C:\\Users\\PC\\Desktop\\eCommerce-RazorPages-main\\Stripovi.Data\\Stripovi.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pc\\Desktop\\acc i zavrseni projekti\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Data\\Stripovi.Data.csproj": {
+    "C:\\Users\\PC\\Desktop\\eCommerce-RazorPages-main\\Stripovi.Data\\Stripovi.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\acc i zavrseni projekti\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Data\\Stripovi.Data.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\eCommerce-RazorPages-main\\Stripovi.Data\\Stripovi.Data.csproj",
         "projectName": "Stripovi.Data",
-        "projectPath": "C:\\Users\\pc\\Desktop\\acc i zavrseni projekti\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Data\\Stripovi.Data.csproj",
-        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\acc i zavrseni projekti\\eCommerce Razor Pages\\eCommerce.v1\\Stripovi.Data\\obj\\",
+        "projectPath": "C:\\Users\\PC\\Desktop\\eCommerce-RazorPages-main\\Stripovi.Data\\Stripovi.Data.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\eCommerce-RazorPages-main\\Stripovi.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -70,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }
