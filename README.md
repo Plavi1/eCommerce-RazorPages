@@ -4,7 +4,7 @@
 
 ## Used Tehnology
 
-* HTML & CSS (Responsive design)
+* HTML & CSS (Responsive design) https://github.com/Plavi1/eCommerce-Pages
 * Bootstrap 
 * C#
 * Razor Pages
